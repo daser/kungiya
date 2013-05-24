@@ -9,7 +9,7 @@ development:
   pool: 5
   timeout: 5000
   username: root
-  password: admin
+  password: nexus1983
   encoding: utf8
   host: localhost
 
@@ -22,7 +22,7 @@ test:
   pool: 5
   timeout: 5000
   username: root
-  password: admin
+  password: nexus1983
   encoding: utf8
   host: localhost
 
@@ -32,6 +32,6 @@ production:
   pool: 5
   timeout: 5000
   username: root
-  password: admin
+  password: nexus1983
   encoding: utf8
   host: localhost
