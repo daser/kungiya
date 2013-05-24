@@ -1,0 +1,16 @@
+<% if @user.errors.any? %>
+	<ul class="signup_errors">
+		<% for message_error in @user.errors.full_messages %>
+		<li>* <%= message_error %></li>
+		<% end %>
+	</ul>
+<% end %>
+<%= "Set Password to continue" %>
+
+<%= form_for :user do |f| %>
+	password : <%= f.password_field(:password) %><br />
+	confirm password : <%= f.password_field(:password_confirmation) %> <br />
+	<%= submit_tag "Login" %>
+<% end %>
+
+

@@ -1,0 +1,16 @@
+<% if @user.errors.any? %>
+	<ul class="signup_errors">
+		<% for message_error in @user.errors.full_messages %>
+		<li>* <%= message_error %></li>
+		<% end %>
+	</ul>
+<% end %>
+
+<%= form_for :user do |f| %>
+	Name : <%= f.text_field :name %><br />
+	Email : <%= f.text_field :email %> <br />
+	Phone : <%= f.text_field :phone %><br />
+	Company : <%= f.text_field :company %><br />
+	How can Kungiya Best help you : <%= f.text_area :description %><br />
+	<%= submit_tag "Show Me Kungiya" %>
+<% end %>
