@@ -3,7 +3,7 @@ class UserMailer < ActionMailer::Base
 
   def activation_email(user)
   	@user = user
-  	@activation_url = "http://0.0.0.0:3000/confirm/#{user.activation_token}/activation"
+  	@activation_url = "http://www.kungiya.com/confirm/#{user.activation_token}/activation"
   	@loginurl = 'kungiya.com/login'
   	email_with_name = "#{@user.name} <#{@user.email}>"
   	mail(:to=>email_with_name,:subject=>"Confirm your registration at kungiya.com") do |format|
@@ -35,7 +35,7 @@ class UserMailer < ActionMailer::Base
   def password_reset(user)
     @user = user
     @company = user.company
-    @reset_url = "http://0.0.0.0:3000/passwordedit/#{user.password_reset_token}"
+    @reset_url = "http://www.kungiya.com/passwordedit/#{user.password_reset_token}"
     mail(:to => user.email,:subject=>"Your Password Reset Request")
   end
 
