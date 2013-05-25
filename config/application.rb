@@ -55,7 +55,7 @@ module Esusu
 
     # Enable the asset pipeline
     config.assets.enabled = true
-    config.assets.precompile += ['index.css']
+    config.assets.precompile += ['application.css']
 
 
     # Version of your assets, change this if you want to expire all your assets
