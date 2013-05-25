@@ -16,6 +16,7 @@ set :default_stage, "staging"
 set :user, "nignux"
 set :group, "root"
 set :use_sudo, false
+set :current_path, '/var/www/kungiya'
 
 set :deploy_via, :remote_cache
 

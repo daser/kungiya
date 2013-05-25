@@ -1,0 +1,19 @@
+--- 
+jquery.min.map: jquery.min.map
+fontawesome-webfont.ttf: fontawesome-webfont.ttf
+application.css: application.css
+twitter/bootstrap/glyphicons-halflings/index.png: twitter/bootstrap/glyphicons-halflings.png
+twitter/bootstrap/glyphicons-halflings-white/index.png: twitter/bootstrap/glyphicons-halflings-white.png
+fontawesome-webfont/index.ttf: fontawesome-webfont.ttf
+application/index.js: application.js
+twitter/bootstrap/glyphicons-halflings-white.png: twitter/bootstrap/glyphicons-halflings-white.png
+fontawesome-webfont.woff: fontawesome-webfont.woff
+fontawesome-webfont.eot: fontawesome-webfont.eot
+application.js: application.js
+jquery/index.min.map: jquery.min.map
+twitter/bootstrap/glyphicons-halflings.png: twitter/bootstrap/glyphicons-halflings.png
+fontawesome-webfont/index.woff: fontawesome-webfont.woff
+fontawesome-webfont/index.eot: fontawesome-webfont.eot
+application/index.css: application.css
+rails/index.png: rails.png
+rails.png: rails.png
