@@ -2,21 +2,56 @@
 <html>
 <head>
   <title>Esusu</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
+  <%= stylesheet_link_tag    "bootstrap", :media => "all" %>
+  <%= stylesheet_link_tag    "theme" %>
+  <%= stylesheet_link_tag    "index" %>
+  <%= stylesheet_link_tag    "animate" %>
   <%= csrf_meta_tags %>
 </head>
-<body style="background: #EEEEEE;">
+<body class="pull_top">
 
-	<div id="user_nav">
-  <% if current_user %>
-    Logged in as <%= current_user.company %>.
-    <%= link_to "Log out", "/logout" %>
-  <% else %>
-    <%= link_to "Sign up", "/get-started" %> or
-    <%= link_to "log in", "/login" %>
-  <% end %>
-</div>
+    <div class="navbar transparent navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+            <a class="brand" href="">
+                <strong>KUNGIYA.COM</strong>
+            </a>
+            <div class="nav-collapse collapse">
+                <ul class="nav pull-right">
+                    <li><a href="/" class="active">HOME</a></li>
+                    <li><a href="">ABOUT US</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            PAGES
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="">Features</a></li>
+                            <li><a href="">Services</a></li>
+                            <li><a href="">Portfolio</a></li>
+                            <li><a href="">Portfolio Item</a></li>
+                            <li><a href="">Coming Soon</a></li>
+                            <li><a href="">Sign in</a></li>
+                            <li><a href="">Sign up</a></li>
+                            <li><a href="">Backgrounds</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">PRICING</a></li>
+                    <li><a href="">CONTACT US</a></li>
+                    <li><a href="">BLOG</a></li>
+                    <li><%= link_to "Sign up", "/get-started" %></li>
+                    <li><%= link_to "log in", "/login" %></li>
+                </ul>
+            </div>
+        </div>
+      </div>
+    </div>
+
 
 
 <% if flash[:alert] %>
