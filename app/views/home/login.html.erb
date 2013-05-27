@@ -1,6 +1,56 @@
-<%= form_tag(:action => 'signin')  do %>
-	username : <%= text_field_tag :email %><br />
-	password : <%= password_field_tag :password %> <br />
-	<%= submit_tag "Login" %>
-<% end %>
-    <%= link_to "Forgot your password?", "/password-reset" %>
+ <!-- Sign In Option 1 -->
+ <% content_for :head do %>
+ 	<%= stylesheet_link_tag 'sign-in' %>
+ <% end %>
+    <div id="sign_in1">
+        <div class="container">
+            <div class="row">
+                <div class="span12 header">
+                    <h4>Log in to your account</h4>
+                    <p>
+                        There are many variations of passages of Lorem alteration in some form  injected humour these randomised words .</p>
+
+                    <div class="span4 social">
+                        <a href="#" class="circle facebook">
+                        	<%= image_tag("face.png") %>
+                        </a>
+                         <a href="#" class="circle twitter">
+							<%= image_tag("twt.png") %>
+                        </a>
+                         <a href="#" class="circle gplus">
+                        	<%= image_tag("gplus.png") %>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="span3 division">
+                    <div class="line l"></div>
+                    <span>or</span>
+                    <div class="line r"></div>
+                </div>
+
+                <div class="span12 footer">
+
+                <%= form_tag(:action => 'signin')  do %>
+					<%= text_field_tag :email, nil, :placeholder => 'Email' %>
+					<%= password_field_tag :password, nil, :placeholder=> 'Password' %> 
+				<%= submit_tag "Login" %>
+				<% end %>
+
+                </div>
+
+                <div class="span12 proof">
+                    <div class="span5 remember">
+                    
+                        <a href="reset.html">Forgot password?</a>
+                    </div>
+
+                    <div class="span3 dosnt">
+                        <span>Don't have an account?</span>
+                        <a href="">Sign up</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- starts footer -->

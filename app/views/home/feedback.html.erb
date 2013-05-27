@@ -1,16 +1,39 @@
-<% if @user.errors.any? %>
-	<ul class="signup_errors">
-		<% for message_error in @user.errors.full_messages %>
-		<li>* <%= message_error %></li>
-		<% end %>
-	</ul>
-<% end %>
+<% content_for :head do %>
+ 	<%= stylesheet_link_tag 'getstarted' %>
+ <% end %>
 
-<%= form_for :user do |f| %>
-	Name : <%= f.text_field :name %><br />
-	Email : <%= f.text_field :email %> <br />
-	Phone : <%= f.text_field :phone %><br />
-	Company : <%= f.text_field :company %><br />
-	How can Kungiya Best help you : <%= f.text_area :description %><br />
-	<%= submit_tag "Show Me Kungiya" %>
-<% end %>
+  <div id="contact">
+        <div class="container">
+            <div class="section_header">
+                <h3>Get started</h3>
+            </div>
+            <div class="row contact">
+                <p>
+                    We’d love to hear from you. Interested in working together? Fill out the form below with some info about your project and I will get back to you as soon as I can. Please allow a couple days for me to respond.</p>
+
+                <%= form_for :user do |f| %>
+                    <div class="row form">
+                        <div class="span6 box">
+                            <%= f.text_field :name, :placeholder=>"Name", :class=>"name" %>
+                            <%= f.text_field :email,  :placeholder=>"Email", :class=>"mail" %>
+                            <%= f.text_field :phone,  :placeholder=>"Phone", :class=>"phone" %>
+                            <%= f.text_field :company, :placeholder=>"Company", :class=>"company" %>
+                        </div>
+                        <div class="span6 box box_r">
+                            <%= f.text_area :description,  :placeholder=>"How can Kungiya Best help you" %>
+
+                        </div>
+                    </div>
+
+                    <div class="row submit">
+                         <div class="span8 right">
+                        		<%= submit_tag "Show Me Kungiya" %>
+                        </div>
+                    </div>
+                <% end %>
+
+
+
+            </div>
+        </div>
+

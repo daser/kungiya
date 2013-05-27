@@ -1,4 +1,5 @@
 class HomeController < ApplicationController
+  layout :resolve_layout
   before_filter :save_login_state!, :only =>[:login, :index, :get_started, :password_reset]
 
   def index
@@ -159,5 +160,17 @@ end
 def hash_password(password)
   Digest::SHA1.hexdigest(password)
 end
+
+
+private 
+def resolve_layout
+  case action_name
+  when "login","passwordreset","feedback","activate"
+    "unauthenticate"
+  else
+    "application"
+  end
+end
+
 
 end
