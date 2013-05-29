@@ -2,10 +2,7 @@
 <html>
 <head>
   <title>Esusu</title>
-  <%= stylesheet_link_tag    "bootstrap", :media => "all" %>
-  <%= stylesheet_link_tag    "theme" %>
-  <%= stylesheet_link_tag    "index" %>
-  <%= stylesheet_link_tag    "animate" %>
+  
   <%= yield :head %>
 
   <%= csrf_meta_tags %>
@@ -26,7 +23,7 @@
             <div class="nav-collapse collapse">
                 <ul class="nav pull-right">
                     <li><a href="/" class="active">HOME</a></li>
-                    <li><a href="">ABOUT US</a></li>
+                    <li><%= link_to "ABOUT US", "/team" %></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             PAGES
@@ -44,10 +41,10 @@
                         </ul>
                     </li>
                     <li><a href="">PRICING</a></li>
-                    <li><a href="">CONTACT US</a></li>
+                    <li><%= link_to "CONTACT US", "/contact" %></li>
                     <li><a href="">BLOG</a></li>
-                    <li><%= link_to "Sign up", "/get-started" %></li>
-                    <li><%= link_to "log in", "/login" %></li>
+                    <li><%= link_to "SIGN UP", "/get-started" %></li>
+                    <li><%= link_to "LOG IN", "/login" %></li>
                 </ul>
             </div>
         </div>
@@ -131,5 +128,7 @@
     <%= javascript_include_tag "jquery-latest.js" %>
     <%= javascript_include_tag "bootstrap.min.js" %>
     <%= javascript_include_tag "theme" %>
+      <%= yield :bottom %>
+
 </body>
 </html>

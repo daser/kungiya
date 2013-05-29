@@ -1,5 +1,9 @@
  <!-- Sign In Option 1 -->
  <% content_for :head do %>
+    <%= stylesheet_link_tag    "bootstrap", :media => "all" %>
+  <%= stylesheet_link_tag    "theme" %>
+  <%= stylesheet_link_tag    "index" %>
+  <%= stylesheet_link_tag    "animate" %>
  	<%= stylesheet_link_tag 'sign-in' %>
  <% end %>
     <div id="sign_in1">
@@ -41,13 +45,12 @@
 
                 <div class="span12 proof">
                     <div class="span5 remember">
-                    
-                        <a href="reset.html">Forgot password?</a>
+                        <%= link_to "Forgot Password?", "/password-reset" %>
                     </div>
 
                     <div class="span3 dosnt">
                         <span>Don't have an account?</span>
-                        <a href="">Sign up</a>
+                            <%= link_to "Sign up", "/get-started" %>
                     </div>
                 </div>
             </div>

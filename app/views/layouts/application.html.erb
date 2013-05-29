@@ -24,7 +24,7 @@
             <div class="nav-collapse collapse">
                 <ul class="nav pull-right">
                     <li><a href="/" class="active">HOME</a></li>
-                    <li><a href="">ABOUT US</a></li>
+                    <li><%= link_to "ABOUT US", "/team" %></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             PAGES
@@ -42,10 +42,10 @@
                         </ul>
                     </li>
                     <li><a href="">PRICING</a></li>
-                    <li><a href="">CONTACT US</a></li>
+                    <li><%= link_to "CONTACT", "/contact" %></li>
                     <li><a href="">BLOG</a></li>
-                    <li><%= link_to "Sign up", "/get-started" %></li>
-                    <li><%= link_to "log in", "/login" %></li>
+                    <li><%= link_to "SIGN UP", "/get-started" %></li>
+                    <li><%= link_to "LOG IN", "/login" %></li>
                 </ul>
             </div>
         </div>

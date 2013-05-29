@@ -156,6 +156,14 @@ def doactivate
   end
 end
 
+def team
+  
+end
+
+def contact
+  
+end
+
  
 def hash_password(password)
   Digest::SHA1.hexdigest(password)
@@ -165,7 +173,7 @@ end
 private 
 def resolve_layout
   case action_name
-  when "login","passwordreset","feedback","activate"
+  when "login","passwordreset","feedback","activate","signin","team","contact"
     "unauthenticate"
   else
     "application"

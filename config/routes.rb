@@ -16,6 +16,12 @@ Esusu::Application.routes.draw do
   match "/admin" =>"admin#home"
   match "/signin" =>"home#signin"
   match "/logout" =>"home#logout"
+
+  match "/team" =>"home#team"
+  match "/contact" =>"home#contact"
+
+
+
   match "/home" => "dashboard#index"
 
   match "/approve/:id" => "admin#approve"
